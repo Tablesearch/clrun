@@ -474,7 +474,7 @@ description: Run and control interactive CLI sessions for AI agents. Handles TUI
 license: MIT
 metadata:
   author: cybertheory
-  version: "1.1.0"
+  version: "1.2.0"
 compatibility: Requires Python >= 3.9 or Node.js >= 18. Works on macOS and Linux. Node version also supports Windows.
 ---
 

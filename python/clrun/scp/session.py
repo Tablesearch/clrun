@@ -5,6 +5,7 @@ from __future__ import annotations
 from clrun.scp.client import (
     SCPClient,
     format_cli_for_buffer,
+    scp_cli_url,
     resolve_input_to_action_or_body,
 )
 from clrun.buffer.buffer_manager import append_to_buffer
@@ -46,7 +47,7 @@ def handle_scp_input(
         return {"output": out}
 
     new_cli = client.get_cli(run_id)
-    out = format_cli_for_buffer(new_cli)
+    out = format_cli_for_buffer(new_cli) + f"View CLI in browser: {scp_cli_url(base_url, run_id)}\n"
     append_to_buffer(terminal_id, out, project_root)
 
     frame = client.get_frame(run_id)

@@ -98,6 +98,12 @@ export function formatCliForBuffer(cli: CliResponse): string {
   return lines.join('\n') + '\n';
 }
 
+/** Build the CLI URL for the current run so users can view the payload in a browser. */
+export function scpCliUrl(baseUrl: string, runId: string): string {
+  const base = baseUrl.replace(/\/$/, '');
+  return `${base}/runs/${runId}/cli`;
+}
+
 /** Resolve user input to an action: "1" -> options[0].action, "action_name" -> action_name, else pass as body. */
 export function resolveInputToActionOrBody(
   input: string,

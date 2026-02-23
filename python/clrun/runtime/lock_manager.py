@@ -11,7 +11,7 @@ from typing import Optional
 from clrun.types import RuntimeState
 from clrun.utils.paths import get_clrun_paths, ensure_clrun_dirs
 
-PACKAGE_VERSION = "1.1.0"
+PACKAGE_VERSION = "1.2.0"
 
 
 def _is_process_alive(pid: int) -> bool:

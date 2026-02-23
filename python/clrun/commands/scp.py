@@ -11,7 +11,7 @@ from clrun.pty.pty_manager import generate_terminal_id, write_session, create_se
 from clrun.queue.queue_engine import init_queue
 from clrun.buffer.buffer_manager import init_buffer, append_to_buffer
 from clrun.ledger.ledger import log_event
-from clrun.scp.client import SCPClient, format_cli_for_buffer
+from clrun.scp.client import SCPClient, format_cli_for_buffer, scp_cli_url
 
 
 def scp_connect_command(base_url: str) -> None:
@@ -43,10 +43,10 @@ def scp_connect_command(base_url: str) -> None:
         fail({"error": "SCP start_run did not return run_id"})
         return
 
-    display = format_cli_for_buffer(cli)
+    base_normalized = base_url.rstrip("/")
+    display = format_cli_for_buffer(cli) + f"View CLI in browser: {scp_cli_url(base_normalized, run_id)}\n"
     append_to_buffer(terminal_id, display, project_root)
 
-    base_normalized = base_url.rstrip("/")
     cwd = os.getcwd()
     session = create_session_metadata(
         terminal_id,

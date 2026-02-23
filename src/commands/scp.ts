@@ -5,7 +5,7 @@ import { generateTerminalId, writeSession } from '../pty/pty-manager';
 import { initQueue } from '../queue/queue-engine';
 import { initBuffer, appendToBuffer } from '../buffer/buffer-manager';
 import { logEvent } from '../ledger/ledger';
-import { SCPClient, formatCliForBuffer } from '../scp/client';
+import { SCPClient, formatCliForBuffer, scpCliUrl } from '../scp/client';
 import type { SessionMetadata } from '../types';
 
 /**
@@ -43,7 +43,8 @@ export async function scpConnectCommand(baseUrl: string): Promise<void> {
     fail({ error: 'SCP startRun did not return run_id' });
   }
 
-  const display = formatCliForBuffer(cli!);
+  const baseNormalized = baseUrl.replace(/\/$/, '');
+  const display = formatCliForBuffer(cli!) + `View CLI in browser: ${scpCliUrl(baseNormalized, runId)}\n`;
   appendToBuffer(terminalId, display, projectRoot);
 
   const now = new Date().toISOString();

@@ -28,7 +28,7 @@ def _error_handler(fn):
 
 
 @click.group(invoke_without_command=True)
-@click.version_option(version="1.1.0", prog_name="clrun")
+@click.version_option(version="1.2.0", prog_name="clrun")
 @click.pass_context
 def cli(ctx: click.Context) -> None:
     """clrun — The Interactive CLI for AI Agents"""

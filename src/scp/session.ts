@@ -1,4 +1,4 @@
-import { SCPClient, formatCliForBuffer, resolveInputToActionOrBody } from './client';
+import { SCPClient, formatCliForBuffer, scpCliUrl, resolveInputToActionOrBody } from './client';
 import { appendToBuffer } from '../buffer/buffer-manager';
 import { updateSession } from '../pty/pty-manager';
 
@@ -35,7 +35,7 @@ export async function handleScpInput(
   }
 
   const newCli = await client.getCli(runId);
-  const out = formatCliForBuffer(newCli);
+  const out = formatCliForBuffer(newCli) + `View CLI in browser: ${scpCliUrl(baseUrl, runId)}\n`;
   appendToBuffer(terminalId, out, projectRoot);
 
   const frame = await client.getFrame(runId);

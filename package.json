@@ -1,6 +1,6 @@
 {
   "name": "clrun",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The Interactive CLI for AI Agents — persistent, deterministic, project-scoped execution substrate",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

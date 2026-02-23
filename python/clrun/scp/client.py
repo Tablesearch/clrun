@@ -95,6 +95,12 @@ def format_cli_for_buffer(cli: Dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def scp_cli_url(base_url: str, run_id: str) -> str:
+    """Build the CLI URL for the current run so users can view the payload in a browser."""
+    base = base_url.rstrip("/")
+    return f"{base}/runs/{run_id}/cli"
+
+
 def resolve_input_to_action_or_body(
     text: str,
     options: List[Dict[str, Any]],
